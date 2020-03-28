@@ -1,5 +1,5 @@
 #!/bin/bash
 function dirmenu(){
 	name="$(dir -1 | dmenu -l 30)"
-	[ -d $name ] && cd $name || ( [-z $EDITOR] && $EDITOR $name || echo "No \$EDITOR set") 
+	[ -d $name ] && cd $name || ( [ -z $EDITOR ] && echo "No \$EDITOR set" || $EDITOR $name) 
 }
