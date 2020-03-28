@@ -1,0 +1,5 @@
+#!/bin/bash
+function dirmenu(){
+	name="$(dir -1 | dmenu -l 30)"
+	[ -d $name ] && cd $name || $EDITOR $name
+}
